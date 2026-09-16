@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="詞人くまさんの公式ウェブサイト。言葉と想いを静かに綴ります。" />
+    <title>詞人くまさん</title>
+    <script>
+      (() => {
+        const introKey = "home-intro-seen";
+
+        if (sessionStorage.getItem(introKey)) {
+          document.documentElement.classList.add(introKey);
+          return;
+        }
+
+        sessionStorage.setItem(introKey, "true");
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="home-page">
+    <header class="site-header">
+      <a class="site-logo" href="#top" aria-label="詞人くまさん ホーム">
+        <img src="HPlogo透明.png" alt="" width="134" height="54" />
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-button__line"></span>
+        <span class="menu-button__line"></span>
+        <span class="sr-only">メニューを開く</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="メインナビゲーション">
+        <a href="index.html" aria-current="page">トップ</a>
+        <a href="profile.html">プロフィール</a>
+        <a href="yomu.html" data-coming-soon>Kindle</a>
+        <a href="#youtube" data-coming-soon>YouTube</a>
+        <a href="#movie" data-coming-soon>映画</a>
+        <a href="#friends" data-coming-soon>仲間</a>
+        <a href="#contact" data-coming-soon>お問い合わせ</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <!-- 将来の背景画像は hero-background に追加できます。 -->
+        <div class="hero-background" aria-hidden="true"></div>
+        <div class="hero-message">
+          <h1 id="hero-title">
+            <span>言葉があるから想いが伝わる</span>
+            <span>想いがあるから言葉が溢れる</span>
+          </h1>
+          <div class="signature-lockup">
+            <p class="signature">詞人くまさん</p>
+            <img class="signature-seal" src="opensea落款.png" alt="" width="1308" height="1450" />
+          </div>
+        </div>
+        <nav class="hero-orbit-nav" aria-label="トップページナビゲーション">
+          <a class="hero-orbit-nav__profile" href="profile.html">プロフィール</a>
+          <a class="hero-orbit-nav__kindle" href="yomu.html" data-coming-soon>Kindle</a>
+          <a class="hero-orbit-nav__youtube" href="#youtube" data-coming-soon>YouTube</a>
+          <a class="hero-orbit-nav__movie" href="#movie" data-coming-soon>映画</a>
+          <a class="hero-orbit-nav__friends" href="#friends" data-coming-soon>仲間</a>
+          <a class="hero-orbit-nav__contact" href="#contact" data-coming-soon>お問い合わせ</a>
+        </nav>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+:root { --yomu-paper: #f7f3ea; --yomu-faint: #8b8377; }
+
+.yomu-page { background: var(--yomu-paper); }
+.yomu-page .site-header { background: rgb(247 243 234 / 92%); }
+.yomu-page .site-nav a[aria-current="page"]::after { transform: scaleX(1); }
+
+.yomu-opening {
+  min-height: 94svh;
+  padding: calc(var(--header-height) + 35px) var(--page-gutter) 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.yomu-opening h1 {
+  position: fixed;
+  z-index: 0;
+  top: 53%;
+  left: 62%;
+  margin: 0;
+  line-height: 0;
+  opacity: .05;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.yomu-opening h1 img {
+  display: block;
+  width: clamp(640px, 68vw, 1040px);
+  height: auto;
+}
+
+.yomu-opening__message, .books { position: relative; z-index: 1; }
+.yomu-opening__message {
+  width: min(100%, 920px);
+  opacity: 0;
+  transform: translateY(12px);
+  animation: quiet-entrance 4.2s cubic-bezier(.22, .6, .3, 1) .35s forwards;
+}
+.yomu-opening__copy { margin: 0; font-size: clamp(25px, 2.8vw, 43px); font-weight: 500; line-height: 2.05; letter-spacing: clamp(.1em, .35vw, .2em); }
+.yomu-opening__copy span { display: block; }
+
+.books { width: min(100%, 1240px); margin-inline: auto; padding: clamp(30px, 4vw, 55px) var(--page-gutter) 90px; }
+.series-heading { margin-bottom: clamp(140px, 18vw, 240px); text-align: center; }
+.series-heading h2 { margin: 0; font-size: clamp(28px, 3.3vw, 46px); font-weight: 500; letter-spacing: .15em; text-indent: .15em; }
+.series-heading__lead { margin: 50px auto 0; color: #68625a; font-size: clamp(15px, 1.35vw, 18px); line-height: 2.2; letter-spacing: .08em; }
+
+.book { display: grid; grid-template-columns: minmax(330px, .9fr) minmax(340px, 1.1fr); align-items: center; gap: clamp(70px, 10vw, 150px); margin-bottom: clamp(190px, 24vw, 330px); }
+.book__visual { margin: 0; position: relative; }
+.book__visual::after { content: ""; position: absolute; z-index: -1; inset: 3% -2% -2% 3%; background: rgb(117 105 88 / 5%); }
+.book__visual img { display: block; width: 100%; height: auto; box-shadow: 0 10px 24px rgb(53 45 34 / 6%), 0 2px 5px rgb(53 45 34 / 5%); }
+.book__copy { max-width: 440px; }
+.book__heading { margin-bottom: clamp(35px, 4vw, 52px); }
+.book__series { margin: 0 0 13px; color: var(--yomu-faint); font-size: clamp(17px, 1.5vw, 20px); letter-spacing: .2em; }
+.book__number { display: flex; align-items: center; gap: 18px; margin: 0 0 26px; color: var(--yomu-faint); font-size: clamp(16px, 1.35vw, 19px); letter-spacing: .24em; }
+.book__number::after { content: ""; width: 62px; height: 1px; background: rgb(98 90 79 / 35%); }
+.book h3 { margin: 0; font-size: clamp(28px, 3vw, 42px); font-weight: 500; line-height: 1.55; letter-spacing: .08em; }
+.book h3[lang="en"] { letter-spacing: .12em; }
+.book__description { margin: 0; font-size: clamp(16px, 1.35vw, 19px); line-height: 1.9; letter-spacing: .065em; }
+.book__description span { display: block; }
+.book__description span + span { margin-top: .65em; }
+.book__link { display: inline-flex; gap: 12px; align-items: center; margin-top: 42px; padding: 8px 1px 10px; color: #71695f; font-size: 13px; letter-spacing: .15em; border-bottom: 1px solid rgb(113 105 95 / 38%); }
+.book__link span { font-size: 12px; transition: transform .35s ease; }
+.book__link:hover span, .book__link:focus-visible span { transform: translate(3px, -3px); }
+
+.book--one .book__visual { width: 88%; margin-left: 3%; }
+.book--one .book__copy { align-self: end; margin-bottom: 10%; }
+.book--two { grid-template-columns: minmax(340px, 1.1fr) minmax(330px, .9fr); margin-bottom: clamp(220px, 27vw, 370px); }
+.book--two .book__visual { grid-column: 2; grid-row: 1; width: 96%; margin: -5% 0 0 auto; }
+.book--two .book__copy { grid-column: 1; grid-row: 1; justify-self: end; align-self: start; margin-top: 18%; }
+.book--three { grid-template-columns: minmax(330px, .96fr) minmax(340px, 1.04fr); }
+.book--three .book__visual { width: 92%; margin-left: 7%; }
+.book--three .book__copy { margin-top: -12%; }
+.books .back-home { display: block; width: fit-content; margin: -70px auto 0; padding: 12px 2px; color: #716b62; font-size: 14px; letter-spacing: .16em; border-bottom: 1px solid rgb(113 107 98 / 36%); }
+
+@media (max-width: 900px) {
+  .yomu-page .site-nav { background: var(--yomu-paper); }
+  .book { gap: 60px; }
+}
+
+@media (max-width: 700px) {
+  .yomu-opening { min-height: 92svh; padding-bottom: 40px; }
+  .yomu-opening h1 { top: 55%; left: 68%; }
+  .yomu-opening h1 img { width: clamp(440px, 115vw, 620px); }
+  .yomu-opening__copy { font-size: clamp(22px, 7vw, 30px); line-height: 1.95; letter-spacing: .08em; }
+  .books { padding: 30px 24px 75px; }
+  .series-heading { margin-bottom: 130px; }
+  .series-heading h2 { font-size: clamp(25px, 7.5vw, 32px); line-height: 1.6; letter-spacing: .08em; text-indent: .08em; }
+  .series-heading__lead { margin-top: 38px; font-size: 15px; text-align: left; }
+  .series-heading__lead br { display: none; }
+  .book, .book--two, .book--three { display: flex; flex-direction: column; align-items: stretch; gap: 58px; margin-bottom: 170px; }
+  .book__visual, .book--one .book__visual, .book--two .book__visual, .book--three .book__visual { order: 1; width: min(88%, 430px); margin: 0 auto; }
+  .book__copy, .book--one .book__copy, .book--two .book__copy, .book--three .book__copy { order: 2; width: 100%; max-width: none; margin: 0; }
+  .book h3 { font-size: clamp(27px, 8vw, 34px); }
+  .book__description { font-size: 16px; }
+  .books .back-home { margin-top: -45px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .yomu-opening__message { opacity: 1; transform: none; animation: none; }
+  .book__link span { transition: none; }
+}
