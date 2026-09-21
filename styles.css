@@ -293,10 +293,11 @@ body.modal-open { overflow: hidden; }
 
   .hero-orbit-nav__profile { --entrance-delay: 8.55s; top: 17%; left: 29%; }
   .hero-orbit-nav__kindle { --entrance-delay: 8.75s; top: 10%; right: 33%; }
-  .hero-orbit-nav__youtube { --entrance-delay: 8.95s; top: 35%; right: 22%; }
-  .hero-orbit-nav__movie { --entrance-delay: 9.15s; right: 30%; bottom: 16%; }
-  .hero-orbit-nav__friends { --entrance-delay: 9.35s; bottom: 10%; left: 35%; }
-  .hero-orbit-nav__contact { --entrance-delay: 9.55s; top: 51%; left: 21%; }
+  .hero-orbit-nav__tsuzuru { --entrance-delay: 8.95s; top: 36%; left: 21%; }
+  .hero-orbit-nav__youtube { --entrance-delay: 9.15s; top: 35%; right: 22%; }
+  .hero-orbit-nav__movie { --entrance-delay: 9.35s; right: 30%; bottom: 16%; }
+  .hero-orbit-nav__friends { --entrance-delay: 9.55s; bottom: 10%; left: 35%; }
+  .hero-orbit-nav__contact { --entrance-delay: 9.75s; top: 56%; left: 19%; }
 
   .home-intro-seen .home-page .hero-message {
     opacity: 0;

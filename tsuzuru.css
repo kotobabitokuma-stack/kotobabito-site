@@ -1,0 +1,82 @@
+:root { --tsuzuru-paper: #f7f3ea; }
+
+.tsuzuru-page { background: var(--tsuzuru-paper); }
+.tsuzuru-page .site-header { background: rgb(247 243 234 / 92%); }
+.tsuzuru-page .site-nav a[aria-current="page"]::after { transform: scaleX(1); }
+
+.tsuzuru-opening {
+  min-height: 94svh;
+  padding: calc(var(--header-height) + 35px) var(--page-gutter) 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.tsuzuru-opening h1 {
+  position: fixed;
+  z-index: 0;
+  top: 53%;
+  left: 62%;
+  margin: 0;
+  line-height: 0;
+  opacity: .05;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.tsuzuru-opening h1 img {
+  display: block;
+  width: clamp(640px, 68vw, 1040px);
+  height: auto;
+}
+
+.tsuzuru-opening__copy,
+.tsuzuru-articles { position: relative; z-index: 1; }
+
+.tsuzuru-opening__copy {
+  margin: 0;
+  font-size: clamp(25px, 2.8vw, 43px);
+  font-weight: 500;
+  line-height: 2.05;
+  letter-spacing: clamp(.1em, .35vw, .2em);
+  opacity: 0;
+  transform: translateY(12px);
+  animation: quiet-entrance 4.2s cubic-bezier(.22, .6, .3, 1) .35s forwards;
+}
+
+.tsuzuru-opening__copy span { display: block; }
+
+.tsuzuru-articles {
+  min-height: 56svh;
+  padding: clamp(100px, 16vw, 210px) var(--page-gutter);
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.tsuzuru-articles__empty {
+  margin: 0;
+  color: #68625a;
+  font-size: clamp(18px, 1.8vw, 24px);
+  line-height: 2.1;
+  letter-spacing: .16em;
+  text-indent: .16em;
+}
+
+@media (max-width: 900px) {
+  .tsuzuru-page .site-nav { background: var(--tsuzuru-paper); }
+}
+
+@media (max-width: 700px) {
+  .tsuzuru-opening { min-height: 92svh; padding-bottom: 40px; }
+  .tsuzuru-opening h1 { top: 55%; left: 68%; }
+  .tsuzuru-opening h1 img { width: clamp(440px, 115vw, 620px); }
+  .tsuzuru-opening__copy { font-size: clamp(20px, 6vw, 27px); line-height: 2.15; letter-spacing: .08em; }
+  .tsuzuru-articles { min-height: 48svh; padding-inline: 24px; }
+  .tsuzuru-articles__empty { font-size: 17px; letter-spacing: .1em; text-indent: .1em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tsuzuru-opening__copy { opacity: 1; transform: none; animation: none; }
+}
