@@ -31,18 +31,22 @@
   height: auto;
 }
 
-.tsuzuru-opening__copy,
+.tsuzuru-opening__message,
 .tsuzuru-articles { position: relative; z-index: 1; }
 
-.tsuzuru-opening__copy {
-  margin: 0;
+.tsuzuru-opening__message {
+  width: min(100%, 920px);
   font-size: clamp(25px, 2.8vw, 43px);
-  font-weight: 500;
-  line-height: 2.05;
-  letter-spacing: clamp(.1em, .35vw, .2em);
   opacity: 0;
   transform: translateY(12px);
   animation: quiet-entrance 4.2s cubic-bezier(.22, .6, .3, 1) .35s forwards;
+}
+
+.tsuzuru-opening__copy {
+  margin: 0;
+  font-weight: 500;
+  line-height: 2.05;
+  letter-spacing: clamp(.1em, .35vw, .2em);
 }
 
 .tsuzuru-opening__copy span { display: block; }
@@ -78,5 +82,5 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .tsuzuru-opening__copy { opacity: 1; transform: none; animation: none; }
+  .tsuzuru-opening__message { opacity: 1; transform: none; animation: none; }
 }

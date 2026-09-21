@@ -41,7 +41,7 @@
         <a href="index.html">トップ</a>
         <a href="profile.html">プロフィール</a>
         <a href="yomu.html">Kindle</a>
-        <a href="tsuzuru.html" aria-current="page">綴</a>
+        <a href="tsuzuru.html" data-coming-soon aria-current="page">ことのは日記</a>
         <a href="index.html#youtube" data-coming-soon>YouTube</a><a href="index.html#movie" data-coming-soon>映画</a>
         <a href="index.html#friends" data-coming-soon>仲間</a><a href="index.html#contact" data-coming-soon>お問い合わせ</a>
       </nav>
@@ -50,16 +50,23 @@
     <main>
       <section class="tsuzuru-opening" aria-labelledby="tsuzuru-title">
         <h1 id="tsuzuru-title"><img src="綴.PNG" alt="綴" /></h1>
-        <p class="tsuzuru-opening__copy">
-          <span>寄り道もまた、一歩一歩。</span>
-          <span>日々の途中に、言の葉を。</span>
-        </p>
+        <div class="tsuzuru-opening__message">
+          <p class="tsuzuru-opening__copy">
+            <span>寄り道もまた、一歩一歩。</span>
+            <span>日々の途中に、言の葉を。</span>
+          </p>
+          <div class="signature-lockup">
+            <p class="signature">詞人くまさん</p>
+            <img class="signature-seal" src="opensea落款.png" alt="" width="1308" height="1450" />
+          </div>
+        </div>
       </section>
 
       <section class="tsuzuru-articles" aria-labelledby="articles-title">
         <h2 id="articles-title" class="sr-only">綴の記事</h2>
         <p class="tsuzuru-articles__empty">まもなく、新たな言の葉を。</p>
-        <!-- 今後、最新記事と記事一覧をこのセクションに追加します。 -->
+        <div class="tsuzuru-articles__latest"><!-- 今後、最新記事を追加します。 --></div>
+        <div class="tsuzuru-articles__archive"><!-- 今後、記事一覧と個別記事へのリンクを追加します。 --></div>
       </section>
     </main>
   </body>
