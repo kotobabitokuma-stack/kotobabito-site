@@ -1,4 +1,6 @@
 /* ES5 syntax is intentional: navigation remains usable on older Safari versions. */
+/* Set this to true when ことのは日記 is ready to open from the site navigation. */
+var tsuzuruPublished = false;
 var menuButton = document.querySelector(".menu-button");
 var navigation = document.querySelector(".site-nav");
 var menuLabel = menuButton && menuButton.querySelector(".sr-only");
@@ -76,10 +78,12 @@ var comingSoonLinks = document.querySelectorAll("a[data-coming-soon]");
 for (var i = 0; i < comingSoonLinks.length; i += 1) {
   (function (comingSoonLink) {
     comingSoonLink.addEventListener("click", function (event) {
-    event.preventDefault();
-    event.stopPropagation();
-    setMenu(false);
-    openComingSoonModal(comingSoonLink);
+      var href = comingSoonLink.getAttribute("href") || "";
+      if (tsuzuruPublished && href.indexOf("tsuzuru.html") !== -1) return;
+      event.preventDefault();
+      event.stopPropagation();
+      setMenu(false);
+      openComingSoonModal(comingSoonLink);
     });
   }(comingSoonLinks[i]));
 }

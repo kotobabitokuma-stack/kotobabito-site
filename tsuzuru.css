@@ -54,8 +54,52 @@
 .tsuzuru-articles {
   min-height: 56svh;
   padding: clamp(100px, 16vw, 210px) var(--page-gutter);
-  display: grid;
-  place-items: center;
+}
+
+.tsuzuru-articles__inner {
+  width: min(100%, 820px);
+  margin: 0 auto;
+}
+
+.tsuzuru-articles h2 {
+  margin: 0 0 clamp(48px, 8vw, 86px);
+  font-size: clamp(21px, 2.3vw, 30px);
+  font-weight: 400;
+  letter-spacing: .18em;
+}
+
+.tsuzuru-articles__list { display: grid; gap: clamp(48px, 7vw, 76px); }
+
+.tsuzuru-card { border-bottom: 1px solid rgb(41 41 39 / 14%); padding-bottom: clamp(42px, 6vw, 62px); }
+.tsuzuru-card__date,
+.tsuzuru-article__date { color: #777168; font-size: 13px; letter-spacing: .12em; }
+.tsuzuru-card h3 { margin: 14px 0 20px; font-size: clamp(20px, 2.2vw, 27px); font-weight: 500; letter-spacing: .07em; }
+.tsuzuru-card__excerpt { margin: 0; color: #57534d; font-size: 15px; line-height: 2; letter-spacing: .05em; }
+.tsuzuru-card__link { display: inline-block; margin-top: 24px; padding-bottom: 5px; border-bottom: 1px solid #8c857a; font-size: 13px; letter-spacing: .16em; }
+.tsuzuru-card__link:hover,
+.tsuzuru-card__link:focus-visible { border-color: currentColor; }
+
+.tsuzuru-article {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding: calc(var(--header-height) + clamp(65px, 9vw, 120px)) var(--page-gutter) clamp(90px, 14vw, 170px);
+}
+.tsuzuru-article__header { margin-bottom: clamp(54px, 8vw, 88px); }
+.tsuzuru-article h1 { margin: 14px 0 0; font-size: clamp(25px, 3.4vw, 38px); font-weight: 500; line-height: 1.7; letter-spacing: .07em; }
+.tsuzuru-article__body { font-size: clamp(16px, 1.4vw, 18px); line-height: 2.25; letter-spacing: .045em; }
+.tsuzuru-article__body p,
+.tsuzuru-article__body ul,
+.tsuzuru-article__body blockquote { margin: 0 0 1.8em; }
+.tsuzuru-article__body h2 { margin: 2.8em 0 1em; font-size: 1.35em; font-weight: 500; }
+.tsuzuru-article__body h3 { margin: 2.4em 0 .9em; font-size: 1.15em; font-weight: 500; }
+.tsuzuru-article__body a { border-bottom: 1px solid #9b9388; }
+.tsuzuru-article__body img { display: block; max-width: 100%; height: auto; margin: 2.5em auto; }
+.tsuzuru-article__body blockquote { padding-left: 1.5em; border-left: 1px solid #aaa197; color: #666057; }
+.tsuzuru-article__footer { margin-top: clamp(68px, 10vw, 110px); }
+.tsuzuru-article__footer .signature-lockup { margin-right: 0; }
+.tsuzuru-article__back { display: inline-block; margin-top: 62px; font-size: 13px; letter-spacing: .13em; }
+
+.tsuzuru-articles__empty {
   text-align: center;
 }
 
@@ -78,6 +122,7 @@
   .tsuzuru-opening h1 img { width: clamp(440px, 115vw, 620px); }
   .tsuzuru-opening__copy { font-size: clamp(20px, 6vw, 27px); line-height: 2.15; letter-spacing: .08em; }
   .tsuzuru-articles { min-height: 48svh; padding-inline: 24px; }
+  .tsuzuru-article { padding-inline: 24px; }
   .tsuzuru-articles__empty { font-size: 17px; letter-spacing: .1em; text-indent: .1em; }
 }
 
