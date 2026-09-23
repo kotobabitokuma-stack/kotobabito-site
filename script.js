@@ -1,6 +1,6 @@
 /* ES5 syntax is intentional: navigation remains usable on older Safari versions. */
 /* Set this to true when ことのは日記 is ready to open from the site navigation. */
-var tsuzuruPublished = false;
+var tsuzuruPublished = true;
 var menuButton = document.querySelector(".menu-button");
 var navigation = document.querySelector(".site-nav");
 var menuLabel = menuButton && menuButton.querySelector(".sr-only");
