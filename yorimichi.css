@@ -274,7 +274,7 @@
 
   .friend-card,
   .friend-card--right {
-    margin-bottom: 46px;
+    margin-bottom: 64px;
     display: block;
   }
 
@@ -283,10 +283,14 @@
 
   .friend-card__visual {
     width: min(90%, 430px);
-    margin: 0 auto 36px;
+    margin: 0 auto 16px;
   }
 
   .friend-card__copy { padding: 0; }
+
+  .friend-card__visual + .friend-card__copy {
+    margin-top: 0;
+  }
 
   .friend-card h2 {
     margin-bottom: 20px;
