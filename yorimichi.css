@@ -30,6 +30,20 @@
   background: linear-gradient(to bottom, rgb(255 250 238 / 8%), rgb(255 250 238 / 28%));
 }
 
+.yorimichi-main::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: clamp(520px, 68svh, 700px);
+  bottom: 36px;
+  left: 50%;
+  width: clamp(150px, 18vw, 250px);
+  transform: translateX(-50%);
+  background: url("yorimichi_michi.PNG") center top / 100% 100% no-repeat;
+  opacity: .18;
+  pointer-events: none;
+}
+
 .yorimichi-opening,
 .yorimichi-friends,
 .yorimichi-closing {
@@ -84,20 +98,6 @@
   width: min(1180px, calc(100% - (var(--page-gutter) * 2)));
   margin: 0 auto;
   padding-bottom: clamp(26px, 4vw, 48px);
-}
-
-.yorimichi-friends::before {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: clamp(90px, 10vw, 130px);
-  transform: translateX(-50%);
-  background: url("yorimichi_michi.PNG") center top / 100% auto repeat-y;
-  opacity: .18;
-  pointer-events: none;
 }
 
 .friend-card {
@@ -255,6 +255,13 @@
 @media (max-width: 700px) {
   .yorimichi-main {
     background-size: auto 900px;
+  }
+
+  .yorimichi-main::after {
+    top: 430px;
+    bottom: 28px;
+    width: clamp(90px, 28vw, 130px);
+    opacity: .15;
   }
 
   .yorimichi-opening {
