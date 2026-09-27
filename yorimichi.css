@@ -88,7 +88,7 @@
 
 .friend-card {
   width: min(100%, 760px);
-  margin-bottom: clamp(58px, 8vw, 96px);
+  margin-bottom: clamp(40px, 5.4vw, 64px);
   display: grid;
   grid-template-columns: minmax(220px, .9fr) minmax(280px, 1.1fr);
   gap: clamp(34px, 5vw, 70px);
@@ -250,7 +250,7 @@
 
   .friend-card,
   .friend-card--right {
-    margin-bottom: 68px;
+    margin-bottom: 46px;
     display: block;
   }
 
