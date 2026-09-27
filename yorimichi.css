@@ -174,10 +174,10 @@
 }
 
 .friend-card__copy > p:not(.friend-card__number) {
-  margin: 0 0 .78em;
+  margin: 0 0 .58em;
   color: #4f4b45;
   font-size: clamp(14px, 1.2vw, 16px);
-  line-height: 1.7;
+  line-height: 1.5;
   letter-spacing: .035em;
 }
 
@@ -288,7 +288,7 @@
 
   .friend-card__copy > p:not(.friend-card__number) {
     font-size: 14px;
-    line-height: 1.65;
+    line-height: 1.48;
   }
 
   .yorimichi-closing {
