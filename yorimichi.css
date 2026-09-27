@@ -86,6 +86,25 @@
   padding-bottom: clamp(26px, 4vw, 48px);
 }
 
+.yorimichi-friends::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: clamp(180px, 22vw, 300px);
+  transform: translateX(-50%);
+  background: url("yorimichi_michi.PNG") center top / 100% auto repeat-y;
+  opacity: .34;
+  pointer-events: none;
+}
+
+.friend-card {
+  position: relative;
+  z-index: 1;
+
+
 .friend-card {
   width: min(100%, 760px);
   margin-bottom: clamp(40px, 5.4vw, 64px);
