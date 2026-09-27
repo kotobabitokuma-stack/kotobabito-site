@@ -180,7 +180,8 @@
 .friend-card__link:focus-visible { opacity: .58; }
 
 .yorimichi-closing {
-  padding: 0 var(--page-gutter) clamp(90px, 13vw, 150px);
+  margin-top: -28px;
+  padding: 0 var(--page-gutter) clamp(70px, 10vw, 110px);
   text-align: center;
 }
 
@@ -193,7 +194,7 @@
 
 .yorimichi-closing .back-home {
   display: inline-block;
-  margin-top: 64px;
+  margin-top: 24px;
   font-size: 13px;
   letter-spacing: .13em;
 }
@@ -275,8 +276,9 @@
   }
 
   .yorimichi-closing {
+    margin-top: -18px;
     padding-inline: 24px;
-    padding-bottom: 80px;
+    padding-bottom: 64px;
   }
 
   .yorimichi-closing p {
