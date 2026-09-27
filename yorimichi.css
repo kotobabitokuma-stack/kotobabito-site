@@ -93,17 +93,17 @@
   top: 0;
   bottom: 0;
   left: 50%;
-  width: clamp(180px, 22vw, 300px);
+  width: clamp(90px, 10vw, 130px);
   transform: translateX(-50%);
   background: url("yorimichi_michi.PNG") center top / 100% auto repeat-y;
-  opacity: .34;
+  opacity: .18;
   pointer-events: none;
 }
 
 .friend-card {
   position: relative;
   z-index: 1;
-
+}
 
 .friend-card {
   width: min(100%, 760px);
