@@ -53,7 +53,7 @@
 
 .tsuzuru-articles {
   min-height: 56svh;
-  padding: clamp(100px, 16vw, 210px) var(--page-gutter);
+  padding: clamp(40px, 6vw, 80px) var(--page-gutter);
 }
 
 .tsuzuru-articles__inner {
@@ -68,7 +68,7 @@
   letter-spacing: .18em;
 }
 
-.tsuzuru-articles__list { display: grid; gap: clamp(48px, 7vw, 76px); }
+.tsuzuru-articles__list { display: grid; gap: clamp(28px, 4vw, 44px); }
 
 .tsuzuru-card { border-bottom: 1px solid rgb(41 41 39 / 14%); padding-bottom: clamp(42px, 6vw, 62px); }
 .tsuzuru-card__date,
