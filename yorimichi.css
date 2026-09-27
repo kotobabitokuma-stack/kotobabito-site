@@ -30,19 +30,6 @@
   background: linear-gradient(to bottom, rgb(255 250 238 / 8%), rgb(255 250 238 / 28%));
 }
 
-.yorimichi-main::after {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  top: clamp(500px, 66svh, 680px);
-  left: 50%;
-  width: clamp(420px, 54vw, 760px);
-  aspect-ratio: 1 / 1;
-  transform: translateX(-50%);
-  background: url("yorimichi-michi.PNG") center top / contain no-repeat;
-  opacity: .16;
-  pointer-events: none;
-}
 
 .yorimichi-opening,
 .yorimichi-friends,
@@ -257,13 +244,6 @@
     background-size: auto 900px;
   }
 
-  .yorimichi-main::after {
-    top: 410px;
-    width: min(88vw, 520px);
-    aspect-ratio: 1 / 1;
-    background-size: contain;
-    opacity: .14;
-  }
 
   .yorimichi-opening {
     min-height: 66svh;
