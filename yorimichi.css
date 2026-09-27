@@ -34,13 +34,13 @@
   content: "";
   position: absolute;
   z-index: 0;
-  top: clamp(520px, 68svh, 700px);
-  bottom: 36px;
+  top: clamp(500px, 66svh, 680px);
   left: 50%;
-  width: clamp(150px, 18vw, 250px);
+  width: clamp(420px, 54vw, 760px);
+  aspect-ratio: 1 / 1;
   transform: translateX(-50%);
-  background: url("yorimichi_michi.PNG") center top / 100% 100% no-repeat;
-  opacity: .18;
+  background: url("yorimichi-michi.PNG") center top / contain no-repeat;
+  opacity: .16;
   pointer-events: none;
 }
 
@@ -258,10 +258,11 @@
   }
 
   .yorimichi-main::after {
-    top: 430px;
-    bottom: 28px;
-    width: clamp(90px, 28vw, 130px);
-    opacity: .15;
+    top: 410px;
+    width: min(88vw, 520px);
+    aspect-ratio: 1 / 1;
+    background-size: contain;
+    opacity: .14;
   }
 
   .yorimichi-opening {
