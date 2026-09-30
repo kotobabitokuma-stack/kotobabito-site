@@ -43,11 +43,11 @@
 .yomu-opening__copy span { display: block; }
 
 .books { width: min(100%, 1240px); margin-inline: auto; padding: clamp(30px, 4vw, 55px) var(--page-gutter) 90px; }
-.series-heading { margin-bottom: clamp(140px, 18vw, 240px); text-align: center; }
+.series-heading { margin-bottom: clamp(90px, 11vw, 145px); text-align: center; }
 .series-heading h2 { margin: 0; font-size: clamp(28px, 3.3vw, 46px); font-weight: 500; letter-spacing: .15em; text-indent: .15em; }
 .series-heading__lead { margin: 50px auto 0; color: #68625a; font-size: clamp(15px, 1.35vw, 18px); line-height: 2.2; letter-spacing: .08em; }
 
-.book { display: grid; grid-template-columns: minmax(330px, .9fr) minmax(340px, 1.1fr); align-items: center; gap: clamp(70px, 10vw, 150px); margin-bottom: clamp(190px, 24vw, 330px); }
+.book { display: grid; grid-template-columns: minmax(330px, .9fr) minmax(340px, 1.1fr); align-items: center; gap: clamp(55px, 7vw, 105px); margin-bottom: clamp(120px, 14vw, 190px); }
 .book__visual { margin: 0; position: relative; }
 .book__visual::after { content: ""; position: absolute; z-index: -1; inset: 3% -2% -2% 3%; background: rgb(117 105 88 / 5%); }
 .book__visual img { display: block; width: 100%; height: auto; box-shadow: 0 10px 24px rgb(53 45 34 / 6%), 0 2px 5px rgb(53 45 34 / 5%); }
@@ -67,13 +67,26 @@
 
 .book--one .book__visual { width: 88%; margin-left: 3%; }
 .book--one .book__copy { align-self: end; margin-bottom: 10%; }
-.book--two { grid-template-columns: minmax(340px, 1.1fr) minmax(330px, .9fr); margin-bottom: clamp(220px, 27vw, 370px); }
+.book--two { grid-template-columns: minmax(340px, 1.1fr) minmax(330px, .9fr); margin-bottom: clamp(130px, 15vw, 205px); }
 .book--two .book__visual { grid-column: 2; grid-row: 1; width: 96%; margin: -5% 0 0 auto; }
 .book--two .book__copy { grid-column: 1; grid-row: 1; justify-self: end; align-self: start; margin-top: 18%; }
 .book--three { grid-template-columns: minmax(330px, .96fr) minmax(340px, 1.04fr); }
 .book--three .book__visual { width: 92%; margin-left: 7%; }
 .book--three .book__copy { margin-top: -12%; }
-.books .back-home { display: block; width: fit-content; margin: -70px auto 0; padding: 12px 2px; color: #716b62; font-size: 14px; letter-spacing: .16em; border-bottom: 1px solid rgb(113 107 98 / 36%); }
+.origin-book { margin: clamp(115px, 14vw, 185px) auto 0; padding-top: clamp(58px, 7vw, 82px); border-top: 1px solid rgb(113 105 95 / 18%); }
+.origin-book__eyebrow { margin-bottom: clamp(55px, 7vw, 85px); text-align: center; }
+.origin-book__eyebrow p { margin: 0; color: var(--yomu-faint); font-size: 14px; letter-spacing: .28em; text-indent: .28em; }
+.origin-book__layout { display: grid; grid-template-columns: minmax(300px, .82fr) minmax(360px, 1.18fr); align-items: center; gap: clamp(60px, 8vw, 118px); }
+.origin-book__visual { width: min(86%, 430px); margin: 0 auto; position: relative; }
+.origin-book__visual::after { content: ""; position: absolute; z-index: -1; inset: 3% -2% -2% 3%; background: rgb(117 105 88 / 5%); }
+.origin-book__visual img { display: block; width: 100%; height: auto; box-shadow: 0 10px 24px rgb(53 45 34 / 6%), 0 2px 5px rgb(53 45 34 / 5%); }
+.origin-book__copy { max-width: 520px; }
+.origin-book__format { margin: 0 0 14px; color: var(--yomu-faint); font-size: 14px; letter-spacing: .2em; }
+.origin-book h2 { margin: 0; font-size: clamp(30px, 3.3vw, 46px); font-weight: 500; line-height: 1.5; letter-spacing: .07em; }
+.origin-book__lead { margin: 34px 0 0; font-size: clamp(17px, 1.5vw, 20px); line-height: 1.95; letter-spacing: .055em; }
+.origin-book__description { margin: 22px 0 0; color: #5f5951; font-size: clamp(15px, 1.25vw, 18px); line-height: 2; letter-spacing: .055em; }
+
+.books .back-home { display: block; width: fit-content; margin: clamp(80px, 10vw, 125px) auto 0; padding: 12px 2px; color: #716b62; font-size: 14px; letter-spacing: .16em; border-bottom: 1px solid rgb(113 107 98 / 36%); }
 
 @media (max-width: 900px) {
   .yomu-page .site-nav { background: var(--yomu-paper); }
@@ -86,16 +99,24 @@
   .yomu-opening h1 img { width: clamp(440px, 115vw, 620px); }
   .yomu-opening__copy { font-size: clamp(22px, 7vw, 30px); line-height: 1.95; letter-spacing: .08em; }
   .books { padding: 30px 24px 75px; }
-  .series-heading { margin-bottom: 130px; }
+  .series-heading { margin-bottom: 90px; }
   .series-heading h2 { font-size: clamp(25px, 7.5vw, 32px); line-height: 1.6; letter-spacing: .08em; text-indent: .08em; }
   .series-heading__lead { margin-top: 38px; font-size: 15px; text-align: left; }
   .series-heading__lead br { display: none; }
-  .book, .book--two, .book--three { display: flex; flex-direction: column; align-items: stretch; gap: 58px; margin-bottom: 170px; }
+  .book, .book--two, .book--three { display: flex; flex-direction: column; align-items: stretch; gap: 44px; margin-bottom: 115px; }
   .book__visual, .book--one .book__visual, .book--two .book__visual, .book--three .book__visual { order: 1; width: min(88%, 430px); margin: 0 auto; }
   .book__copy, .book--one .book__copy, .book--two .book__copy, .book--three .book__copy { order: 2; width: 100%; max-width: none; margin: 0; }
   .book h3 { font-size: clamp(27px, 8vw, 34px); }
   .book__description { font-size: 16px; }
-  .books .back-home { margin-top: -45px; }
+  .origin-book { margin-top: 80px; padding-top: 52px; }
+  .origin-book__eyebrow { margin-bottom: 48px; }
+  .origin-book__layout { display: flex; flex-direction: column; align-items: stretch; gap: 48px; }
+  .origin-book__visual { width: min(86%, 420px); }
+  .origin-book__copy { max-width: none; }
+  .origin-book h2 { font-size: clamp(28px, 8vw, 36px); }
+  .origin-book__lead { margin-top: 28px; }
+  .origin-book__description br { display: none; }
+  .books .back-home { margin-top: 72px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
