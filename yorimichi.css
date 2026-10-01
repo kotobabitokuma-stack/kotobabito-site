@@ -45,7 +45,20 @@
   align-items: center;
 }
 
+.yorimichi-opening__brush {
+  position: absolute;
+  z-index: 0;
+  right: clamp(-110px, -5vw, -36px);
+  bottom: clamp(-80px, -4vw, -24px);
+  width: clamp(440px, 47vw, 740px);
+  height: auto;
+  opacity: .07;
+  pointer-events: none;
+}
+
 .yorimichi-opening__inner {
+  position: relative;
+  z-index: 1;
   width: min(100%, 820px);
   margin: 0 auto;
   text-align: center;
@@ -249,6 +262,12 @@
     min-height: 66svh;
     padding-inline: 24px;
     padding-bottom: 90px;
+  }
+
+  .yorimichi-opening__brush {
+    right: -48px;
+    bottom: -18px;
+    width: clamp(270px, 82vw, 420px);
   }
 
   .yorimichi-opening h1 {
