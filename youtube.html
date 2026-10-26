@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>動｜YouTube｜KOTOBABITO</title>
+    <meta name="description" content="声と言の葉、人との出会い。詞人くまさんの5つの再生リストを、ひとつの環から。" />
+    <link rel="canonical" href="https://kotobabito.com/youtube.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="動｜YouTube｜KOTOBABITO" />
+    <meta property="og:description" content="声と言の葉、人との出会い。詞人くまさんの5つの再生リストを、ひとつの環から。" />
+    <meta property="og:url" content="https://kotobabito.com/youtube.html" />
+    <meta property="og:site_name" content="KOTOBABITO" />
+    <meta name="twitter:card" content="summary" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5PMWLNDNH3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5PMWLNDNH3');
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="youtube.css" />
+    <script>document.documentElement.classList.remove("no-js");</script>
+    <script src="script.js" defer></script>
+    <script src="youtube.js" defer></script>
+  </head>
+  <body class="youtube-page">
+    <header class="site-header">
+      <a class="site-logo" href="index.html" aria-label="詞人くまさん ホーム">
+        <img src="HPlogo透明.png" alt="" width="134" height="54" />
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-button__line"></span><span class="menu-button__line"></span>
+        <span class="sr-only">メニューを開く</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="メインナビゲーション">
+        <a href="index.html">トップ</a>
+        <a href="profile.html">プロフィール</a>
+        <a href="yomu.html">Kindle</a>
+        <a href="tsuzuru.html">ことのは日記</a>
+        <a href="youtube.html" aria-current="page">YouTube</a>
+        <a href="yorimichi.html">仲間</a>
+      </nav>
+    </header>
+
+    <main class="youtube-main">
+      <header class="youtube-intro">
+        <p class="youtube-kicker">KOTOBABITO · YOUTUBE</p>
+        <h1>声と言の葉が、めぐる場所。</h1>
+      </header>
+      <section class="youtube-orbit" aria-label="5つの再生リスト">
+        <img class="youtube-brush" src="dou.PNG" alt="" width="596" height="602" aria-hidden="true" />
+        <nav class="playlist-orbit" aria-label="再生リストを選ぶ">
+          <a class="playlist playlist--1" href="https://www.youtube.com/playlist?list=PLKSV_QM_RVx2qPVBeg0D7nTlrwiULf4er" data-playlist="PLKSV_QM_RVx2qPVBeg0D7nTlrwiULf4er" aria-controls="youtube-viewer"><span>配信</span></a>
+          <a class="playlist playlist--2" href="https://www.youtube.com/playlist?list=PLKSV_QM_RVx1IHsAVD9wqP77lNfnXRPZS" data-playlist="PLKSV_QM_RVx1IHsAVD9wqP77lNfnXRPZS" aria-controls="youtube-viewer"><span>過去の配信</span></a>
+          <a class="playlist playlist--3" href="https://www.youtube.com/playlist?list=PLKSV_QM_RVx3i5EsUNuCA5mI898sZfjO-" data-playlist="PLKSV_QM_RVx3i5EsUNuCA5mI898sZfjO-" aria-controls="youtube-viewer"><span>仲間紹介</span></a>
+          <a class="playlist playlist--4" href="https://www.youtube.com/playlist?list=PLKSV_QM_RVx1ZbLhqhuTI9pbTKxG9wzHw" data-playlist="PLKSV_QM_RVx1ZbLhqhuTI9pbTKxG9wzHw" aria-controls="youtube-viewer"><span>言の葉つむぎ</span></a>
+          <a class="playlist playlist--5" href="https://www.youtube.com/playlist?list=PLKSV_QM_RVx2Cl_RjMRTC1PJsLV_b0aAK" data-playlist="PLKSV_QM_RVx2Cl_RjMRTC1PJsLV_b0aAK" aria-controls="youtube-viewer"><span>オンライン書下ろし</span></a>
+        </nav>
+      </section>
+      <section id="youtube-viewer" class="youtube-viewer" aria-labelledby="playlist-title" hidden>
+        <div class="youtube-viewer__heading">
+          <button id="youtube-close" type="button" class="youtube-close">閉じる <span aria-hidden="true">×</span></button>
+          <h2 id="playlist-title" class="youtube-current" tabindex="-1"></h2>
+        </div>
+        <div class="youtube-player-wrap">
+          <iframe id="youtube-player" title="YouTube再生リスト" width="640" height="360" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="youtube-help">プレーヤー右上の再生リストから、動画を選べます。</p>
+        <p class="youtube-note">動画が表示されない場合は、YouTubeでご覧ください。</p>
+        <a id="youtube-external" class="youtube-external" href="https://www.youtube.com/playlist?list=PLKSV_QM_RVx2qPVBeg0D7nTlrwiULf4er" target="_blank" rel="noopener noreferrer">配信をYouTubeで見る <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブで開く）</span></a>
+      </section>
+      <footer class="youtube-closing">
+        <p>声にふれて、言の葉に出会う。<br>あなたの今日に、そっと寄り添えますように。</p>
+        <noscript><p>再生リスト名を押すとYouTubeで開きます。</p></noscript>
+        <a class="back-home" href="index.html">← トップへ戻る</a>
+      </footer>
+    </main>
+  </body>
+</html>

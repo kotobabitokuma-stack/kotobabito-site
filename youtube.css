@@ -1,0 +1,63 @@
+.youtube-page .site-nav a[aria-current="page"]::after { transform: scaleX(1); }
+.youtube-main { padding: calc(var(--header-height) + 44px) var(--page-gutter) 64px; }
+.youtube-intro { text-align: center; }
+.youtube-kicker { margin: 0 0 22px; color: var(--muted-ink); font-size: 10px; letter-spacing: .3em; }
+.youtube-intro h1 { margin: 0; font-size: clamp(23px, 2.6vw, 34px); font-weight: 400; letter-spacing: .14em; line-height: 1.8; }
+/* The lettering alone describes the orbit, as on the home page. */
+.youtube-orbit { position: relative; isolation: isolate; max-width: 1080px; height: 620px; margin: 25px auto 50px; }
+.youtube-brush { position: absolute; z-index: -1; top: 50%; left: 50%; width: min(74vw, 740px); height: auto; transform: translate(-50%, -50%); opacity: .055; pointer-events: none; }
+.playlist-orbit { position: absolute; inset: 0; }
+.playlist { position: absolute; padding: 12px 0; color: var(--muted-ink); font-size: calc(clamp(15px, 1.18vw, 18px) + 2pt); letter-spacing: .16em; line-height: 1.8; white-space: nowrap; transition: color .4s ease; }
+.playlist::after { content: ""; position: absolute; inset: auto .16em 4px 0; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform .55s ease; }
+.playlist:hover, .playlist[aria-current="true"] { color: var(--ink); }
+.playlist:hover::after, .playlist:focus-visible::after, .playlist[aria-current="true"]::after { transform: scaleX(1); transform-origin: left; }
+.playlist:focus-visible, .youtube-close:focus-visible, .youtube-external:focus-visible { outline: 1px solid var(--muted-ink); outline-offset: 5px; }
+.playlist--1 { top: 4%; left: 50%; transform: translateX(-50%); }
+.playlist--2 { top: 30%; right: 9%; }
+.playlist--3 { bottom: 13%; right: 21%; }
+.playlist--4 { bottom: 9%; left: 17%; }
+.playlist--5 { top: 29%; left: 3%; }
+.youtube-viewer { width: min(100%, 800px); margin: 0 auto 90px; text-align: center; scroll-margin-top: calc(var(--header-height) + 28px); }
+.youtube-viewer[hidden] { display: none; }
+.youtube-viewer__heading { position: relative; padding: 12px 80px 24px; }
+.youtube-current { margin: 0; font-size: clamp(18px, 2vw, 23px); font-weight: 400; letter-spacing: .14em; line-height: 1.8; }
+.youtube-current:focus { outline: none; }
+.youtube-close { position: absolute; top: 12px; right: 0; padding: 6px 0 6px 12px; border: 0; background: transparent; color: var(--muted-ink); font: inherit; font-size: 12px; letter-spacing: .1em; cursor: pointer; }
+.youtube-close:hover { color: var(--ink); }
+.youtube-player-wrap { aspect-ratio: 16 / 9; background: #f3f2ef; }
+.youtube-player-wrap iframe { display: block; width: 100%; height: 100%; border: 0; }
+.youtube-help { margin: 20px 0 10px; color: var(--muted-ink); font-size: 11px; line-height: 1.9; letter-spacing: .04em; }
+.youtube-external { display: inline-block; padding: 8px 0; border-bottom: 1px solid #c7c5be; font-size: 12px; letter-spacing: .08em; }
+.youtube-note { color: var(--muted-ink); font-size: 11px; line-height: 1.8; }
+.youtube-closing { text-align: center; }
+.youtube-closing > p:first-child { margin: 10px 0 28px; font-size: 14px; letter-spacing: .1em; line-height: 2.3; }
+.youtube-closing .back-home { display: inline-block; margin-top: 20px; font-size: 12px; letter-spacing: .1em; }
+@media (prefers-reduced-motion: no-preference) {
+  .playlist-orbit { animation: youtube-arrival 1.8s ease both; }
+  @keyframes youtube-arrival { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+}
+@media (max-width: 900px) {
+  .youtube-orbit { height: 540px; }
+  .playlist { font-size: 17px; letter-spacing: .12em; }
+  .playlist--5 { left: 0; }
+  .playlist--2 { right: 2%; }
+}
+@media (max-width: 600px) {
+  .youtube-main { padding: calc(var(--header-height) + 35px) 24px 48px; }
+  .youtube-intro h1 { font-size: clamp(20px, 5.3vw, 27px); letter-spacing: .06em; }
+  .youtube-orbit { height: 440px; margin-top: 30px; margin-bottom: 45px; }
+  .youtube-brush { width: min(112%, 440px); opacity: .05; }
+  .playlist { font-size: clamp(13px, 3.6vw, 16px); letter-spacing: .07em; }
+  .playlist--1 { top: 3%; }
+  .playlist--2 { top: 37%; right: 0; }
+  .playlist--5 { top: 24%; left: 0; }
+  .playlist--3 { bottom: 17%; right: 0; }
+  .playlist--4 { bottom: 7%; left: 3%; }
+  .youtube-viewer { margin-bottom: 60px; }
+  .youtube-viewer__heading { padding: 0 0 24px; }
+  .youtube-close { position: static; display: block; margin: 0 0 20px auto; }
+  .youtube-current { font-size: 18px; }
+  .youtube-help, .youtube-note { font-size: 10px; }
+  .youtube-closing > p:first-child { font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) { .playlist, .playlist::after { transition: none; } }
