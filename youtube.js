@@ -16,6 +16,22 @@
     }
   }
 
+  // This category opens YouTube directly; remove any active embed before leaving.
+  var liveLink = document.querySelector('.playlist--1');
+  function stopForExternalLink(event) {
+    if (event.type === 'auxclick' && event.button !== 1) return;
+    viewer.hidden = true;
+    player.removeAttribute('src');
+    player.title = 'YouTube再生リスト';
+    title.textContent = '';
+    selected = null;
+    resetSelection();
+  }
+  if (liveLink) {
+    liveLink.addEventListener('click', stopForExternalLink);
+    liveLink.addEventListener('auxclick', stopForExternalLink);
+  }
+
   resetSelection();
   for (var i = 0; i < links.length; i += 1) {
     links[i].addEventListener('click', function (event) {
