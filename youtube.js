@@ -17,13 +17,6 @@
   }
 
   resetSelection();
-  }
-  if (liveLink) {
-    liveLink.addEventListener('click', stopForExternalLink);
-    liveLink.addEventListener('auxclick', stopForExternalLink);
-  }
-
-  resetSelection();
   for (var i = 0; i < links.length; i += 1) {
     links[i].addEventListener('click', function (event) {
       if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button > 0) return;
