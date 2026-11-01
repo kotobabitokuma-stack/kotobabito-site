@@ -30,9 +30,9 @@
         title.textContent = name;
         player.title = name + ' — YouTube再生リスト';
         // The live archive playlist fails in YouTube's own playlist embed preview.
-        // Start from its verified, individually embeddable first video instead.
+        // Isolate the verified individual video without playlist parameters for diagnosis.
         if (this.classList.contains('playlist--1')) {
-          player.src = 'https://www.youtube.com/embed/wMDoSKD9p4M?list=' + encodeURIComponent(this.getAttribute('data-playlist')) + '&autoplay=0&playsinline=1&rel=0';
+          player.src = 'https://www.youtube.com/embed/wMDoSKD9p4M?autoplay=0&playsinline=1&rel=0';
         } else {
           player.src = 'https://www.youtube.com/embed/videoseries?list=' + encodeURIComponent(this.getAttribute('data-playlist')) + '&autoplay=0&playsinline=1&rel=0';
         }
