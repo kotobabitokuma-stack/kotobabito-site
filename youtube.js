@@ -16,16 +16,7 @@
     }
   }
 
-  // This category opens YouTube directly; remove any active embed before leaving.
-  var liveLink = document.querySelector('.playlist--1');
-  function stopForExternalLink(event) {
-    if (event.type === 'auxclick' && event.button !== 1) return;
-    viewer.hidden = true;
-    player.removeAttribute('src');
-    player.title = 'YouTube再生リスト';
-    title.textContent = '';
-    selected = null;
-    resetSelection();
+  resetSelection();
   }
   if (liveLink) {
     liveLink.addEventListener('click', stopForExternalLink);
