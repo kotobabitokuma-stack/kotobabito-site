@@ -129,3 +129,6 @@
 @media (prefers-reduced-motion: reduce) {
   .tsuzuru-opening__message { opacity: 1; transform: none; animation: none; }
 }
+
+/* Covers in the November 2026 Kindle journal entry. */
+.tsuzuru-article__body img[src*="kindle-books-20261104-"] { width: 240px; max-width: 100%; margin: 1em auto 2em; }
