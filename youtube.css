@@ -12,11 +12,11 @@
 .playlist:hover, .playlist[aria-current="true"] { color: var(--ink); }
 .playlist:hover::after, .playlist:focus-visible::after, .playlist[aria-current="true"]::after { transform: scaleX(1); transform-origin: left; }
 .playlist:focus-visible, .youtube-close:focus-visible, .youtube-external:focus-visible { outline: 1px solid var(--muted-ink); outline-offset: 5px; }
-.playlist--1 { bottom: 4%; left: 50%; transform: translateX(-50%); }
-.playlist--2 { bottom: 30%; right: 9%; }
-.playlist--3 { top: 13%; right: 21%; }
-.playlist--4 { top: 9%; left: 17%; }
-.playlist--5 { bottom: 29%; left: 3%; }
+.playlist--1 { top: 4%; left: 50%; transform: translateX(-50%); }
+.playlist--2 { top: 30%; right: 9%; }
+.playlist--3 { bottom: 13%; right: 21%; }
+.playlist--4 { bottom: 9%; left: 17%; }
+.playlist--5 { top: 29%; left: 3%; }
 .youtube-viewer { width: min(100%, 800px); margin: 0 auto 90px; text-align: center; scroll-margin-top: calc(var(--header-height) + 28px); }
 .youtube-viewer[hidden] { display: none; }
 .youtube-viewer__heading { position: relative; padding: 12px 80px 24px; }
@@ -50,11 +50,11 @@
   .youtube-brush { width: min(100%, 380px); opacity: .045; }
   .playlist-orbit { position: relative; inset: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px 10px; align-items: center; }
   .playlist { position: relative; top: auto; right: auto; bottom: auto; left: auto; transform: none; min-width: 0; padding: 15px 4px; font-size: clamp(14px, 3.9vw, 17px); letter-spacing: .04em; line-height: 1.6; text-align: center; white-space: normal; overflow-wrap: anywhere; }
-  .playlist--1 { grid-column: 1 / -1; grid-row: 4; justify-self: center; }
-  .playlist--2 { grid-column: 2; grid-row: 3; }
-  .playlist--5 { grid-column: 1; grid-row: 3; }
-  .playlist--3 { grid-column: 2; grid-row: 2; }
-  .playlist--4 { grid-column: 1; grid-row: 2; }
+  .playlist--1 { grid-column: 1 / -1; justify-self: center; }
+  .playlist--2 { grid-column: 2; grid-row: 2; }
+  .playlist--5 { grid-column: 1; grid-row: 2; }
+  .playlist--3 { grid-column: 2; grid-row: 3; }
+  .playlist--4 { grid-column: 1; grid-row: 3; }
   .playlist::after { left: 10%; right: 10%; bottom: 8px; }
   .youtube-viewer { margin-bottom: 60px; }
   .youtube-viewer__heading { padding: 0 0 24px; }
